@@ -1,0 +1,17 @@
+FROM %%ORG%%/base:%%TAG%%
+MAINTAINER The Dockbit Team "team@dockbit.com"
+
+# Install Chef via Omnibus packages
+USER root
+WORKDIR /tmp
+COPY components/chef.sh .
+RUN ./chef.sh && rm -f chef.sh
+
+# Chef configuration
+USER dockbit
+RUN mkdir -p $HOME/.chef
+
+# Execution environment
+COPY docker-entrypoint.sh /docker-entrypoint.sh
+WORKDIR /home/dockbit
+ENTRYPOINT ["/docker-entrypoint.sh"]

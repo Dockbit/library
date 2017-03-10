@@ -1,0 +1,14 @@
+#!/bin/bash
+#
+# List of supported NodeJS versions
+#
+
+image=node
+
+versions=(
+  0.10.46
+  0.12.15
+  5.12.0
+  6.5.0
+  6.8.0:latest
+)

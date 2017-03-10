@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+# List of supported ChefDK versions
+#
+
+image=chef
+
+versions=(
+  1.1.16:latest
+)

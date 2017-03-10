@@ -1,0 +1,17 @@
+FROM dockbit/base:latest
+MAINTAINER The Dockbit Team "team@dockbit.com"
+
+# Install Convox
+USER root
+WORKDIR /tmp
+COPY components/convox.sh .
+RUN ./convox.sh && rm -f convox.sh
+
+# Configuration
+USER dockbit
+RUN mkdir -p $HOME/.convox && echo 'export CONVOX_HOST=console.convox.com' >> $HOME/.bash_profile
+
+# Execution environment
+COPY docker-entrypoint.sh /docker-entrypoint.sh
+WORKDIR /home/dockbit
+ENTRYPOINT ["/docker-entrypoint.sh"]

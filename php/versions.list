@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+# List of supported PHP versions
+#
+
+image=php
+
+versions=(
+  7.0:latest
+)

@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+# List of supported Python versions
+#
+
+image=python
+
+versions=(
+  2.7.11
+  3.4.4:latest
+)

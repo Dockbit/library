@@ -1,0 +1,17 @@
+#!/bin/bash
+#
+# List of supported Ruby versions
+#
+
+image=ruby
+
+versions=(
+  2.1.7
+  2.1.8
+  2.2.2
+  2.2.3
+  2.2.4
+  2.3.0
+  2.3.1
+  2.3.2:latest
+)

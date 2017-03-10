@@ -1,0 +1,14 @@
+FROM dockbit/base:latest
+MAINTAINER The Dockbit Team "team@dockbit.com"
+
+# Install Packer
+USER root
+WORKDIR /tmp
+COPY components/packer.sh .
+RUN ./packer.sh && rm -f packer.sh
+
+# Execution environment
+COPY docker-entrypoint.sh /docker-entrypoint.sh
+USER dockbit
+WORKDIR /home/dockbit
+ENTRYPOINT ["/docker-entrypoint.sh"]
