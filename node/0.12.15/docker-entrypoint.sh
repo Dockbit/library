@@ -1,6 +1,11 @@
 #!/bin/bash
 source /bin/dockbit_bootstrap.sh
 
+# if avn/.node-version isn't involved, load the required version with nvm use
+if [ -z "$__avn_active_file" ]; then
+  nvm use 0.12.15
+fi
+
 # Compose a string of which node dependencies to track
 if [ -f package.json ];  then node_dependencies="-f package.json";                     fi
 if [ -f .node-version ]; then node_dependencies="$node_dependencies -f .node-version"; fi
