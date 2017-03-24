@@ -11,6 +11,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 - Fix loading order of Node provider versions.
 - Fix use of [rbenv](https://github.com/rbenv/rbenv) for [Ruby](ruby/) provider versions.
 
+### Changed
+- Update php7.0-cli to 7.0.15. 
 
 ## 2017-03-04
 ### Changed
