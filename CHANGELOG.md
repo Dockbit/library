@@ -3,7 +3,7 @@ All changes to the images, whether it's a new image or an update will be added h
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 
-## [Unreleased]
+## 2017-03-24
 ### Added
 - Add ca-certificates to [Base](base/) image.
 
