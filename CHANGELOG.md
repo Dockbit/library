@@ -3,6 +3,10 @@ All changes to the images, whether it's a new image or an update will be added h
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 
+## 2017-03-27
+### Changed
+- Rename [HerokuCli](heroku_cli) and [HerokuToolbelt](heroku_toolbelt) stage variable names. 
+
 ## 2017-03-24
 ### Added
 - Add ca-certificates to [Base](base/) image.

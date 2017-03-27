@@ -8,12 +8,12 @@ PATH=/usr/local/bin:$PATH
 cat << EOF > $HOME/.netrc
 machine api.heroku.com
   login dockbit
-  password $DOCKBIT_HEROKU_API_KEY
+  password $DOCKBIT_HEROKU_CLI_API_KEY
 machine git.heroku.com
   login dockbit
-  password $DOCKBIT_HEROKU_API_KEY
+  password $DOCKBIT_HEROKU_CLI_API_KEY
 EOF
 chmod 0600 $HOME/.netrc
 
-run heroku git:remote --app $DOCKBIT_HEROKU_APP_NAME
+run heroku git:remote --app $DOCKBIT_HEROKU_CLI_APP_NAME
 run_user
