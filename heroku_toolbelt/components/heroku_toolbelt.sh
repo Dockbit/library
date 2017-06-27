@@ -21,4 +21,9 @@ rbenv shell 2.3.0 \
   && gem install heroku -v ${HEROKU_TOOLBELT_VERSION} && heroku version
 rbenv shell 2.3.1 \
   && gem install heroku -v ${HEROKU_TOOLBELT_VERSION} && heroku version
-
+rbenv shell 2.3.2 \
+  && gem install heroku -v ${HEROKU_TOOLBELT_VERSION} && heroku version
+rbenv shell 2.3.4 \
+  && gem install heroku -v ${HEROKU_TOOLBELT_VERSION} && heroku version
+rbenv shell 2.4.0 \
+  && gem install heroku -v ${HEROKU_TOOLBELT_VERSION} && heroku version
