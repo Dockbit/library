@@ -3,12 +3,16 @@ All changes to the images, whether it's a new image or an update will be added h
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 
+## 2017-06-28
+### Added
+- Add [Ruby](ruby/) versions: [2.3.4](ruby/2.3.4), [2.4.0](ruby/2.4.0) and [2.4.1](ruby/2.4.1).
+
 ## 2017-06-19
 ### Added
 - Added [Docker](docker/) builder integration - Early access.
 
 ### Changed
-- Update Update PHP to version 7.0.18 in [Base](base/) image. 
+- Update PHP to version 7.0.18 in [Base](base/) image. 
 - Update OpenJDK to version 8u131-b11-0 in [Base](base/) image.
 
 ## 2017-03-24
