@@ -13,9 +13,6 @@ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> $HOME/.bash_profile
 echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> $HOME/.bash_profile
 echo 'eval "$(pyenv init -)"' >> $HOME/.bash_profile
 
-# Python packages binaries
-echo 'export PATH="~/.local/bin/:$PATH"' >> $HOME/.bash_profile
-
 source $HOME/.bash_profile
 
 # Install Python versions
