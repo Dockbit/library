@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+# List of supported Erlang versions
+#
+
+image=erlang
+
+versions=(
+  19.3
+  20.0:latest
+)
