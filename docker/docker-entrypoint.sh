@@ -11,8 +11,10 @@ else
 fi
 
 # Build
-if [ -d $DOCKBIT_DOCKER_DOCKERFILE_PATH ]; then
+if [ -n "${DOCKBIT_DOCKER_DOCKERFILE_PATH}" ]; then
   cd $DOCKBIT_DOCKER_DOCKERFILE_PATH
+else
+  cd $DOCKBIT_CWD
 fi
 
 run docker build -t $DOCKBIT_DOCKER_IMAGE .
