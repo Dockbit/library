@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+# List of supported Elixir versions
+#
+
+image=elixir
+
+versions=(
+  1.2.6
+  1.3.4
+  1.4.5:latest
+)

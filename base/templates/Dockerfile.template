@@ -72,9 +72,17 @@ RUN ./ruby.sh
 COPY components/python.sh .
 RUN ./python.sh
 
+# Erlang
+COPY components/erlang.sh .
+RUN ./erlang.sh
+
+# Elixir
+COPY components/elixir.sh .
+RUN ./elixir.sh
+
 # Cleanup
 USER root
-RUN rm -f nodejs.sh ruby.sh python.sh
+RUN rm -f nodejs.sh ruby.sh python.sh erlang.sh elixir.sh
 
 # Pipeline command execution environment
 USER dockbit

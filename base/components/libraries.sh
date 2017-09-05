@@ -33,7 +33,8 @@ apt-get -qq update && apt-get -qq install -y --no-install-recommends \
   libwebp-dev \
   libxml2-dev \
   libxslt-dev \
-  libyaml-dev
+  libyaml-dev \
+  unixodbc-dev
 
 # Cleanup
 rm -rf /var/lib/apt/lists/*
