@@ -10,6 +10,15 @@ else
   docker login --username $DOCKBIT_DOCKER_REGISTRY_USERNAME --password $DOCKBIT_DOCKER_REGISTRY_PASSWORD
 fi
 
+# Parse build-time variables
+OIFS=$IFS
+IFS=","
+for arg in $DOCKBIT_DOCKER_BUILD_ARGUMENTS
+do
+  export docker_build_args=$docker_build_args" --build-arg $arg"
+done
+IFS=$OIFS
+
 # Build
 if [ -n "${DOCKBIT_DOCKER_DOCKERFILE_PATH}" ]; then
   cd $DOCKBIT_DOCKER_DOCKERFILE_PATH
@@ -17,7 +26,11 @@ else
   cd $DOCKBIT_CWD
 fi
 
-run docker build -t $DOCKBIT_DOCKER_IMAGE .
+if [ -n "${DOCKBIT_DOCKER_BUILD_ARGUMENTS}" ]; then
+  run docker build $docker_build_args -t $DOCKBIT_DOCKER_IMAGE .
+else
+  run docker build -t $DOCKBIT_DOCKER_IMAGE .
+fi
 
 # Tag & Push
 if [ -n "${DOCKBIT_DOCKER_REGISTRY}" ]; then
