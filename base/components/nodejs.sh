@@ -2,8 +2,8 @@
 
 set -e
 
-export NVM_VERSION=0.31.7
-export NODE_VERSION=6.8.0
+export NVM_VERSION=0.33.4
+export NODE_VERSION=6.11.3
 export PATH=$DOCKBIT_CWD/node_modules/.bin:$HOME/.nvm/bin:$PATH
 echo 'export PATH=$DOCKBIT_CWD/node_modules/.bin:$HOME/.nvm/bin:$PATH' >> $HOME/.bash_profile
 
@@ -22,6 +22,9 @@ source $HOME/.bash_profile && \
   nvm install 0.12.15       && npm --quiet install --global yarn avn avn-nvm bower && \
   nvm install 5.12.0        && npm --quiet install --global yarn avn avn-nvm bower && \
   nvm install 6.5.0         && npm --quiet install --global yarn avn avn-nvm bower && \
+  nvm install 6.8.0         && npm --quiet install --global yarn avn avn-nvm bower && \
+  nvm install 7.10.0        && npm --quiet install --global yarn avn avn-nvm bower && \
+  nvm install 8.5.0         && npm --quiet install --global yarn avn avn-nvm bower && \
   nvm install $NODE_VERSION && npm --quiet install --global yarn avn avn-nvm bower
 
 nvm alias default $NODE_VERSION

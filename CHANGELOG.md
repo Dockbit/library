@@ -7,6 +7,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 ### Added
 - New [Erlang](erlang/) integration with initial versions: [19.3](erlang/19.3) and [20.0](erlang/20.0)
 - New [Elixir](elixir/) integration with initial versions: [1.2.6](elixir/1.2.6), [1.3.4](elixir/1.3.4) and [1.4.5](elixir/1.4.5)
+- Add [Node](node/) versions: [6.11.3](node/6.11.3), [7.10.0](node/7.10.0) and [8.5.0](node/8.5.0).
+
+### Changed
+- Default [Node](node/) version is now `6.11.3` instead of `6.8.0`.
 
 ### Changed
 - Update PHP to version 7.0.22 in [Base](base/) image.
