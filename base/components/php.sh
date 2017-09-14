@@ -2,7 +2,7 @@
 
 set -e
 
-PHP_VERSION=7.0.18-0ubuntu0.16.04.1
+PHP_VERSION=7.0.22-0ubuntu0.16.04.1
 COMPOSER_VERSION=1.2.1
 
 # PHP

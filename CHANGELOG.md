@@ -8,6 +8,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 - New [Erlang](erlang/) integration with initial versions: [19.3](erlang/19.3) and [20.0](erlang/20.0)
 - New [Elixir](elixir/) integration with initial versions: [1.2.6](elixir/1.2.6), [1.3.4](elixir/1.3.4) and [1.4.5](elixir/1.4.5)
 
+### Changed
+- Update PHP to version 7.0.22 in [Base](base/) image.
+
 ## 2017-09-08
 - Add support for Docker [build-time arguments](https://docs.docker.com/engine/reference/commandline/build/#set-build-time-variables-build-arg) in [Docker](docker/) image.
 
