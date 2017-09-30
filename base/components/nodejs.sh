@@ -25,6 +25,7 @@ source $HOME/.bash_profile && \
   nvm install 6.8.0         && npm --quiet install --global yarn avn avn-nvm bower && \
   nvm install 7.10.0        && npm --quiet install --global yarn avn avn-nvm bower && \
   nvm install 8.5.0         && npm --quiet install --global yarn avn avn-nvm bower && \
+  nvm install 8.6.0         && npm --quiet install --global yarn avn avn-nvm bower && \
   nvm install $NODE_VERSION && npm --quiet install --global yarn avn avn-nvm bower
 
 nvm alias default $NODE_VERSION

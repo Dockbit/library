@@ -11,3 +11,6 @@ nvm use 0.12.15 && npm --quiet install -g snyk@${SNYK_VERSION}
 nvm use 5.12.0  && npm --quiet install -g snyk@${SNYK_VERSION}
 nvm use 6.5.0   && npm --quiet install -g snyk@${SNYK_VERSION}
 nvm use 6.8.0   && npm --quiet install -g snyk@${SNYK_VERSION}
+nvm use 6.11.3  && npm --quiet install -g snyk@${SNYK_VERSION}
+nvm use 7.10.0  && npm --quiet install -g snyk@${SNYK_VERSION}
+nvm use 8.5.0   && npm --quiet install -g snyk@${SNYK_VERSION}

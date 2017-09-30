@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 
 ## Unreleased
 ### Added
+- Add [Node](node/) version: [8.6.0](node/8.6.0)
 - New [Erlang](erlang/) integration with initial versions: [19.3](erlang/19.3) and [20.0](erlang/20.0)
 - New [Elixir](elixir/) integration with initial versions: [1.2.6](elixir/1.2.6), [1.3.4](elixir/1.3.4) and [1.4.5](elixir/1.4.5)
 
