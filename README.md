@@ -1,5 +1,7 @@
 # Dockbit Library
 
+![Deploy status](https://img.shields.io/dockbit/dockbit/library.svg?token=Hstg3Cjd4CAPJb573HKAN57d&logo=dockbit)
+
 Every deployment that launches on the Dockbit platform is backed by a [Provider](http://docs.dockbit.com/integrations/). Providers are modeled after a Docker image plus a UI component. 
 
 Dockbit runs each deployment in a container, offering isolation and a clean-slate for every deployment step. This makes sure that no state is persistent between deployments. Capitalizing on [Docker](https://www.docker.com/) containers not only allows us to launch your deployments on Dockbit really fast, but also depend on the Dockerfile as a standardized format for building and extending integrations.
@@ -8,7 +10,7 @@ The Library is a composed of Dockbit-maintained Docker images. Each image includ
 
 All images are built on top of the [Base image](base/). There are no Providers that utilize the Base image directly, each Provider builds it's corresponding image(s) on top of Base.
 
-The Base image utilizes the [latest LTS](https://github.com/Dockbit/in-library/blob/master/base/Dockerfile#L1) release of Ubuntu.
+The Base image utilizes the [latest LTS](https://github.com/Dockbit/library/blob/master/base/Dockerfile#L1) release of Ubuntu.
 
 
 ## Image types 
