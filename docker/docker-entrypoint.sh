@@ -10,6 +10,16 @@ else
   docker login --username $DOCKBIT_DOCKER_REGISTRY_USERNAME --password $DOCKBIT_DOCKER_REGISTRY_PASSWORD
 fi
 
+# Check if multiple image names are passed (usually for multiple tags)
+# Parse comma-delimited string and construct tagging portion of docker cmd
+OIFS=$IFS
+IFS=","
+for image in $DOCKBIT_DOCKER_IMAGE
+do
+  export docker_images_names=$docker_images_names" -t $image"
+done
+IFS=$OIFS
+
 # Parse build-time variables
 OIFS=$IFS
 IFS=","
@@ -27,15 +37,18 @@ else
 fi
 
 if [ -n "${DOCKBIT_DOCKER_BUILD_ARGUMENTS}" ]; then
-  run docker build $docker_build_args -t $DOCKBIT_DOCKER_IMAGE .
+  run docker build $docker_build_args $docker_images_names .
 else
-  run docker build -t $DOCKBIT_DOCKER_IMAGE .
+  run docker build $docker_images_names .
 fi
 
 # Tag & Push
-if [ -n "${DOCKBIT_DOCKER_REGISTRY}" ]; then
-  run docker tag $DOCKBIT_DOCKER_IMAGE $DOCKBIT_DOCKER_REGISTRY/$DOCKBIT_DOCKER_IMAGE
-  run docker push $DOCKBIT_DOCKER_REGISTRY/$DOCKBIT_DOCKER_IMAGE
-else
-  run docker push $DOCKBIT_DOCKER_IMAGE
-fi
+for image in ${DOCKBIT_DOCKER_IMAGE//,/ }
+do
+  if [ -n "${DOCKBIT_DOCKER_REGISTRY}" ]; then
+    run docker tag $image $DOCKBIT_DOCKER_REGISTRY/$image
+    run docker push $DOCKBIT_DOCKER_REGISTRY/$image
+  else
+    run docker push $image
+  fi
+done
