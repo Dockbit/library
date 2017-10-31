@@ -3,6 +3,13 @@ All changes to the images, whether it's a new image or an update will be added h
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 
+## 2017-10-31
+### Added
+- Add support for supplying multiple image names/tags in [Docker](docker/) Provider
+
+### Changed
+- Fix variable name for private registry URL in [Docker](docker/) Provider
+
 ## 2017-10-01
 ### Added
 - New [Erlang](erlang/) integration with initial versions: [19.3](erlang/19.3) and [20.0](erlang/20.0)
