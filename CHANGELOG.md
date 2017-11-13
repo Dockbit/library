@@ -3,6 +3,10 @@ All changes to the images, whether it's a new image or an update will be added h
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 
+## Unreleased
+### Changed
+- Update OpenJDK to version 8u151 in [Base](base/) image.
+
 ## 2017-10-31
 ### Added
 - Add support for supplying multiple image names/tags in [Docker](docker/) Provider
