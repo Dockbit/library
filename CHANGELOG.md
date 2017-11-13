@@ -4,6 +4,9 @@ All changes to the images, whether it's a new image or an update will be added h
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 
 ## Unreleased
+### Added
+- New [Google Cloud](google_cloud/) integration (with support for kubernetes).
+
 ### Changed
 - Update OpenJDK to version 8u151 in [Base](base/) image.
 
