@@ -1,0 +1,14 @@
+FROM dockbit/base:latest
+MAINTAINER The Dockbit Team "team@dockbit.com"
+
+# Install gcloud
+USER root
+WORKDIR /tmp
+COPY components/gcloud.sh .
+RUN ./gcloud.sh && rm -f gcloud.sh
+
+# Execution environment
+COPY docker-entrypoint.sh /docker-entrypoint.sh
+USER dockbit
+WORKDIR /home/dockbit
+ENTRYPOINT ["/docker-entrypoint.sh"]
