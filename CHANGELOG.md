@@ -7,8 +7,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 ### Added
 - New [Google Cloud](google_cloud/) integration (with support for kubernetes).
 
+## 2017-11-18
 ### Changed
 - Update OpenJDK to version 8u151 in [Base](base/) image.
+- Update [Docker](docker) Provider to 17.06.2 (introducing multi-stage builds).
 
 ## 2017-10-31
 ### Added
