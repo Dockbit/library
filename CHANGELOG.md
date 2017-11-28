@@ -7,6 +7,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 ### Added
 - New [Google Cloud](google_cloud/) integration (with support for kubernetes).
 
+## 2017-11-28
+### Changed
+- Update [AWS S3 Website](aws_s3_website) to 3.4.0. If you used `cloudfront_distribution_config` in `s3_website.yml`, check [here](https://github.com/laurilehmijoki/configure-s3-website/blob/master/changelog.md#200) for instructions on using the latest configuration sytnax.
+
 ## 2017-11-18
 ### Changed
 - Update OpenJDK to version 8u151 in [Base](base/) image.
