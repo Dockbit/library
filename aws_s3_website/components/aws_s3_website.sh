@@ -2,7 +2,7 @@
 
 set -e
 
-export S3_WEBSITE_VERSION=2.15.1
+export S3_WEBSITE_VERSION=3.4.0
 
 source $HOME/.bash_profile
 gem install s3_website -v ${S3_WEBSITE_VERSION} \
